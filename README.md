@@ -5,4 +5,5 @@ ideas from : https://data-flair.training/blogs/python-project-ideas/ and https:/
 ## day 1: moonweight
 stanford free code for corona
 
-## day 2: hangman
+## day 2, 3: hangman
+manual hangman. person vs random word generator
