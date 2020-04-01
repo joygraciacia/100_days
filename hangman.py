@@ -47,6 +47,16 @@ print(output)
 playing_game = True
 guesses = 1 
 
+
+def check():
+	if(check_if_win == len(answer)):
+		print("you win!")
+		return False 
+	if(guesses == attempts):
+		print("you lose!")
+		return False 
+
+
 while(playing_game):
 	check_if_win = 0
 	guesses = guesses + 1
@@ -61,12 +71,11 @@ while(playing_game):
 	for l in range(len(answer)):
 		if(output[l] == answer[l]):
 			check_if_win = check_if_win + 1
+	
 
- 
     if(check_if_win == len(answer)):
-    	print("you win!")
+    	print("You win!")
     	playing_game = False
-
 	# if(check_if_win == len(answer)):
 	# 	print("You win!")
 	# 	playing_game = False
