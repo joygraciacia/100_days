@@ -9,3 +9,4 @@ stanford free code for corona
 manual hangman. person vs random word generator
 
 ## day 4, 5: safe passwords
+random password generator
