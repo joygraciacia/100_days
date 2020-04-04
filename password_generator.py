@@ -1,4 +1,5 @@
 import random
+from random import shuffle
 import string
 #strong passwords have a mix of lowercase letters, uppercase letters, numbers, and symbols.
 
@@ -25,27 +26,38 @@ symbols = split(symbols)
 #13: 7, 2, 2, 2
 #14 8, 2, 2, 2
 
-# print("Welcome to password generator! ")
-# pw_length = int(input("Now accepting length... Enter a number between 8 and 14: "))
-pw_length = 5
+print("Welcome to password generator! ")
+
+fact = True 
+
+while(fact):
+
+	pw_length = int(input("Now accepting length... Enter a number that is greater than 8: "))
+
+	if(pw_length >= 8):
+		fact = False
+	
+
 password = ['*']*pw_length
 
 # upper case
 for a in range(0, 2):
-    password[a] = upper_case[random.randint(1,(len(upper_case)-1))]
+	password[a] = upper_case[random.randint(1,(len(upper_case)-1))]
 
 # number
 for b in range(2, 4):
-    password[b] = numbers[random.randint(1,(len(numbers))-1)]
+	password[b] = numbers[random.randint(1,(len(numbers))-1)]
 
 # symbols
 for c in range(4, 6):
-    password[c] = symbols[random.randint(1,(len(symbols))-1)]
+	password[c] = symbols[random.randint(1,(len(symbols))-1)]
 
-# lower case
+# lower case 
 for d in range(6, pw_length):
-    password[d] = lower_case[random.randint(1,(len(lower_case))-1)]
+	password[d] = lower_case[random.randint(1,(len(lower_case))-1)]
 
 password = list(password)
+new_password = random.sample(password, len(password))
 
-print(password)
+new_password = ''.join(new_password)
+print(new_password)
