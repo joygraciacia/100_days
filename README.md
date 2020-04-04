@@ -10,3 +10,6 @@ manual hangman. person vs random word generator
 
 ## day 4, 5: safe passwords
 random password generator
+
+## day 6: xts 
+time series data type
