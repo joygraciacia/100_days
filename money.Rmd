@@ -1,0 +1,46 @@
+---
+title: "money.Rmd"
+output: html_document
+---
+
+```{r}
+library(quantmod)
+library(xts)
+library(rvest)
+library(tidyverse)
+library(stringr)
+library(forcats)
+library(lubridate)
+library(plotly)
+library(corrplot)
+library(dplyr)
+library(ggplot2)
+```
+
+```{r}
+getSymbols("AMZN",from="2018-08-17",to="2020-04-03")
+```
+
+#crash mar 9
+#old analysis aug 17 2018 onwards
+
+```{r}
+AMZN %>% Ad() %>% dailyReturn(type='log')
+```
+
+```{r}
+AMZN_data <- AMZN %>% Ad() %>% dailyReturn(type='log')
+head(AMZN_data)
+```
+
+```{r}
+crash <- AMZN_data[index(AMZN_data) >= "2020-03-09"]
+```
+
+```{r}
+AMZN_data$crash <- index(AMZN_data) >= "2020-03-09"
+```
+```{r}
+index(AMZN_data)
+AMZN_data$daily.returns
+```
