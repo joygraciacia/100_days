@@ -43,4 +43,4 @@ AMZN_data$crash <- index(AMZN_data) >= "2020-03-09"
 ```{r}
 index(AMZN_data)
 AMZN_data$daily.returns
-```
+``` 
