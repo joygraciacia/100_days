@@ -13,3 +13,7 @@ random password generator
 
 ## day 6: xts 
 time series data type
+
+## day 7: break 
+
+## day 8: ai hangman
