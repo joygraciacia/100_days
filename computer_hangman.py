@@ -25,16 +25,23 @@ non_vowels = list(non_vowels[0])
 
 #choosing the word
 actual_word = words_4[random.randint(0,4)]
+#output screen 
+output = ['*']*len(actual_word)
 
-#dumb computer
-index = random.randint(0,len(alphabets))
-
-#computer guess
-guess = alphabets[random.randint(0,len(alphabets))]
-print(guess)
 
 check_if_win = 0
 
-for j in range(len(actual_word)):
-	if(actual_word[j] == guess):
-		output[j] = guess
+for j in range(0, 10):
+	#dumb computer guess
+	guess = alphabets[random.randint(0,len(alphabets))]
+
+	for j in range(len(actual_word)):
+		if(actual_word[j] == guess):
+			output[j] = guess
+			alphabets = alphabet.pop(j)
+			check_if_win = check_if_win + 1
+
+	print(guess)
+	print(output)
+	print(actual_word)
+
