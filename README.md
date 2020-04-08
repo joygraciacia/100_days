@@ -16,4 +16,4 @@ time series data type
 
 ## day 7: break 
 
-## day 8: computer hangman
+## day 8, 9: computer hangman
