@@ -1,0 +1,40 @@
+*{
+  font-family: "Helvetica Neue";
+  font-weight: 200;
+  color: #FFDF00;
+  background-color: black;
+  text-align: center;
+}
+
+h1{
+  padding-top: 250px;
+  padding-bottom: 50px;
+  font-size: 300%;
+}
+
+#quotedisplay{
+  padding-bottom: 50px;
+}
+
+.whosaidit{
+  padding-bottom: 50px;
+  color: #FBFCD4;
+}
+
+button{
+  background: white;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  color: #1e272e;
+  border-radius: 3px;
+}
+
+img{
+  display: block;
+  height: 100px;
+  margin: auto;
+}
