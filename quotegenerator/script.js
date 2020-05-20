@@ -1,3 +1,9 @@
+const chuck_p = document.getElementById("chuck");
+const blair_p = document.getElementById("blair");
+const dan_p = document.getElementById("dan");
+const serena_p = document.getElementById("serena");
+var x; 
+
 var quotes = {
   "dan": ["you are no one until you're talked about"],
   "blair" : ["if you're going to be sad, you might as well be sad in paris"],
@@ -10,29 +16,52 @@ var quotes = {
   "blair" : ["if you really want something, you don't stop for anyone or anything until you get it"]
 }
 
-function randomNumber(){
-  return Math.floor(Math.random()*Object.keys(quotes).length);
+function main(){
+  chuck_p.addEventListener('click', function(){
+    check("chuck");
+  })
+  blair_p.addEventListener('click', function(){
+    check("blair");
+  })
+  dan_p.addEventListener('click', function(){
+    check("dan");
+  })
+  serena_p.addEventListener('click', function(){
+    check("serena");
+  })
+}
+
+function newQuote(){
+  randomNumber = Math.floor(Math.random()*Object.keys(quotes).length);
+  document.getElementById('quotedisplay').innerHTML = Object.values(quotes)[randomNumber];
+  x = Object.keys(quotes)[randomNumber];
+  console.log(x);
+  return x;
 }
 
 
-function newQuote(){
-  /*
-  var randomNumber = Math.floor(Math.random()*Object.keys(quotes).length);
-  */
-  /*
-  document.getElementById('quotedisplay').innerHTML = Object.values(quotes)[3];
-  */
-
-  $quotedisplay = Object.values(quotes)[3];
-
-  console.log(Object.values(quotes)[5]);
+function check(userChoice){
+  // var answer = newQuote();
+  console.log(x);
+  if(x==userChoice && x== "chuck"){
+    console.log("chuck");
+    document.getElementById('fakebutton').innerHTML = "You're right! It's Chuck";
+  }else if(x==userChoice && x== "blair"){
+    console.log("blair");
+    document.getElementById('fakebutton').innerHTML = "You're right! It's Blair";
+  }else if(x==userChoice && x== "dan"){
+    console.log("dan");
+    document.getElementById('fakebutton').innerHTML = "You're right! It's Dan";
+  }else if(x==userChoice && x== "serena"){
+    console.log("serena");
+    document.getElementById('fakebutton').innerHTML = "You're right! It's Serena";
+  }else{
+    console.log("none")
+    document.getElementById('fakebutton').innerHTML = "Try again.";
+  }
 }
 
 /* short cut to document.getElementById
 var $button = document.querySelector('.button');
 */
-
-function answer(){
-
-
-}
+main();

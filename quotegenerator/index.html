@@ -7,37 +7,33 @@
     <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
+  	<header>
     <h1> Gossip Girl</h1>
     <div id ="quotedisplay">
         you know you love me
     </div>
-    <div class="whosaidit">
-      <br>
-      <!--button onclick="answer()" id ="chuck"> Chuck Bass </button>
-      <button onclick="answer()" id ="dan"> Dan Humphrey </button>
-      <button onclick="answer()" id ="blair"> Blair Waldorf </button>
-      <button onclick="answer()" id ="serena"> Serena Van Der Woodsen</button-->
-
-      <div id ="chuck">
-        <img src ="chuck.jpg" alt =" ">
+	</header>
+    <section>
+      <div id="chuck" class ="image-cropper">
+        <img src="chuck.jpg" alt=" " class="profile-pic">
       </div>
       <div id ="dan">
-        <img src ="dan.jpg" alt =" ">
+        <img src ="dan.jpg" alt =" " class="profile-pic">
       </div>
       <div id ="blair">
-        <img src ="blair.jpg" alt =" ">
+        <img src ="blair.jpg" alt =" "class="profile-pic">
       </div>
       <div id ="serena">
-        <img src ="serena.jpg" alt =" ">
-      </div>
-
-    </div>
+        <img src ="serena.jpg" alt =" "class="profile-pic">
+      </div> 
+    </section>
+    <section>
     <button onclick="newQuote()">New Quote</button>
-    <div id="fact">
+<!-- 	<div id="fact">
     </div>
-    <div class="fakebutton">
-      <p> click me </p>
+ -->    <div id="fakebutton">
     </div>
+	</section>
     <script src="script.js"></script>
   </body>
 </html>
