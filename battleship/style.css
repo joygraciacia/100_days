@@ -34,7 +34,28 @@ img{
 
 #score{
   text-align: center;
-  padding-top: 40px;
+  padding-top: 10px;
   padding-bottom: 20px;
 }
 
+#message{
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+#one, #two{
+  text-align: center;
+  background-color: #ffb3b3;
+  border-radius: 2px;
+  border-color: black;
+  margin-left: 5px;
+  margin-right: 5px;
+  padding-left: 3px;
+  padding-right: 3px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+#one:hover, #two:hover{
+  background-color: #2050df
+}
