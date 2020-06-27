@@ -1,15 +1,21 @@
-from flask import Flask           # import flask
-app = Flask(__name__)             # create an app instance
+from flask import Flask 
+from models import Schema 
+app = Flask(__name__)
 
-@app.route("/")                   # at the end point /
-def hello():                      # call method hello
-    return "Hello World!"         # which returns "hello world"
+@app.route('/')
+def hello():
+    return "Hello World!"
 
-@app.route("/<name>")
-def hello_name(name):
-	return "Hello " + name
+@app.route('/<name>')
+def hi(name):
+    return "Hi " + name
 
-
-if __name__ == "__main__":        # on running python app.py
+if __name__ == "__main__":
 	Schema()
-    app.run(debug=True)  		  # run flask app
+	app.run(debug=True)
+
+# Also need a primary key
+# Create an item (title - text, description - text, createdon - date, duedate - date)
+# Delete an item (is_deleted - boolean)
+# Mark an item done (is_done - boolean)
+# Update an item (update? )
