@@ -22,7 +22,7 @@ def index():
 
     cities = City.query.all()
 
-    url = 'http://api.openweathermap.org/data/2.5/weather?appid=94a75533eb9b0d50f5599add4552265d&q={}'
+    url = 'http://api.openweathermap.org/data/2.5/weather?appi&q={}'
 
     weather_data = []
 
