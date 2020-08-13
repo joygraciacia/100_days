@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Should you wear cashmere? </h1>
+    <div class="response">
+    <form method="POST">
+        <input class="add" name="city" type="text" placeholder="City Name">
+        <button class="button is-info">
+            Add City
+        </button>
+    </form>
+  </div>
+    <div class="output">
+      <br>
+      {% for weather in weather_data %}
+      <div class="box">
+        <div class="media-content">
+          <div class="content">
+          <p>
+              <span class="title">{{ weather.city.name }}</span>
+              <br>
+              <span class="subtitle">{{ weather.temperature }}° F</span>
+              <br> {{ weather.description }}
+              </p>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+    </div>
+
+</body>
+</html>
